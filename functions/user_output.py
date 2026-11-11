@@ -10,13 +10,12 @@ def user_chooce():
         if choice == "":
             print("con't be empty")
             continue
-        if v.is_it_on_range(choice) == True:
-            if v.is_it_a_number(choice) == True:
+        if v.is_it_a_number(choice) == True:
+            if v.is_it_on_range(choice) == True:
                 return int(choice)
             else:
-                print("You must enter a whole number ")
+                print("the number out of range")
                 continue
         else:
-            print("the number out of range")
+            print("You must enter a whole number ")
             continue
-
