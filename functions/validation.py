@@ -44,7 +44,7 @@ def check_if_x_player_win():
     global WINNING_LINES
     x_box = tuple(sorted(x_box))
     for win in WINNING_LINES:
-        if x_box == win:
+        if all(item in x_box for item in win):
             return True
         else:
             return False
@@ -53,7 +53,7 @@ def check_if_o_player_win():
     from functions.box import o_box
     o_box = tuple(sorted(o_box))
     for win in WINNING_LINES:
-        if o_box == win:
+        if all(item in o_box for item in win):
             return True
     else:
         return False
